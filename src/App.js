@@ -40,37 +40,37 @@ export default class App extends Component {
     return (
       <div>
         <div className="parallaxLayer">
-          <img src={Backgrounds} alt="" />
+          <img className="mountain" src={Backgrounds} alt="" />
         </div>
         <div className="back">
           <img src={this.state.isTop ? `${Layer5}` : `${Moon}` } alt="" />
         </div>
         <div className="parallaxLayer parallaxLayer1">
-          <img src={Layer4} alt="" />
+          <img className="mountain" src={Layer4} alt="" />
         </div>
         <div className="parallaxLayer parallaxLayer1">
-          <img src={Layer3} alt="" />
+          <img className="mountain" src={Layer3} alt="" />
         </div>
         <div className="parallaxLayer parallaxLayer2">
-          <img src={Layer2} alt="" />
+          <img className="mountain" src={Layer2} alt="" />
         </div>
         <Parallax strength={600}>
           <Background>
-            <div className="Heading">
-              <div>
+            <div className="heading">
+              <div className="box">
                 <h1 className="name">Luke Barrett</h1>
                 <h4 className="title">Web Developer</h4>
               </div>
             </div>
           </Background>
           <div className="parallaxLayer parallaxLayer3">
-            <img src={Layer1} alt="" />
+            <img className="mountain" src={Layer1} alt="" />
           </div>
           <Parallax strength={400}>
             <Background>
               <img className="cloud" src={Layer4} alt="" />
             </Background>
-            <img src={Layer} alt="" />
+            <img className="mountain" src={Layer} alt="" />
           </Parallax>
         </Parallax>
         <Content />

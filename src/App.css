@@ -1,31 +1,17 @@
-.parallaxs {
-  /* width: 100vw; */
-  /* height: 100vh; */
-  /* overflow-x: hidden; */
-  /* overflow-y: auto; */
-}
 
 .parallaxLayer {
   position: absolute;
-  
 }
 
 img {
   display: block;
-  /* width: 100vw; */
-  /* height: 100vh; */
-  /* position: relative; */
-  /* bottom: 0; */
 }
 
 .back {
   position: fixed;
-
 }
 
 .relative {
-  position: relative;
-  /* height: 100vh; */
   width: 100vw;
   z-index: 10;
 }
@@ -37,21 +23,14 @@ img {
 .main {
   display: grid;
   align-items: center;
-  grid-template-columns: 470px 1fr;
   background-color: #2d102f;
-  width: 100vw;
   height: 100vh;
 }
-.Heading {
-  display: grid;
+.heading {
+  display: flex;
   height: 80vh;
   align-items: center;
   justify-content: center;
-}
-.ParallaxWrapper {
-  height: 100vh;
-  width: 100vw;
-  /* height: 1080px; */
 }
 .name {
   font-size: 90px;
@@ -63,18 +42,24 @@ img {
   height: 200px;
   margin-left: 30px;
   margin-bottom: 200px;
-  width: 100%;
+  /* width: 100%; */
   color: rgb(254, 214, 190);
 }
-.aboutImage {
-  margin-top: 20px;
-  border-radius: 300px;
-  width: 80%;
-  height: 300px;
+.aboutImageWrapper {
+  grid-area: man;
+  width: 100%;
+  justify-content: center;
+  /* height: 300px; */
 }
-.links {
+.aboutImage {
+  /* margin-top: 20px; */
+  border-radius: 300px;
+  width: 400px;
+}
+.linksWrapper {
   display: grid;
-  grid-template-columns: 40px 40px;
+  width: 100%;
+  grid-area: icon;
   justify-content: center;
 }
 a:link {
@@ -86,4 +71,42 @@ a:visited {
 a:hover {
   color: rgb(255, 157, 113);
 }
-
+/* .mountain {
+  width: 100vw;
+} */
+.box {
+  justify-content: center;
+  width: 650px;
+  height: 200px;
+}
+.textWrapper {
+  grid-area: header;
+  width: 100%;
+  height: 100px;
+  }
+.text {
+  /* display: grid; */
+  width: 100%;
+}
+.meContainer {
+  display: grid;
+  grid-template-columns: 470px 1fr;
+  grid-template-rows: 200px 1fr 50px;
+  grid-template-areas: 
+    "header ."
+    "man ."
+    "icon .";
+}
+.links {
+  display: grid;
+  grid-template-columns: 40px 40px;
+  width:100px;
+  margin: 10px;
+}
+.aboutHead {
+  width: 100%;
+  font-size: 40px;
+}
+.aboutText {
+  width: 100%;
+}

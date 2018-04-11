@@ -11,13 +11,21 @@ const Content = () => {
     return (
         <div className="main">
             <div className="aboutMe">
-                <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
-                    <h1>About Me</h1>
-                    <p>I am a VSchool Graduate who learned the Mern Stack. While in school I have expanded my learning and studied Styled-Components. My passion for Web Development comes from the challenge and reward that it brings when you are able to overcome the problems that are presented.</p>
-                    <img className="aboutImage" src={Me} alt="" />
-                    <div className="links">
-                        <a href="https://github.com/brickmaker17"><FontAwesomeIcon size="2x" icon={["fab", "github"]} /></a>
-                        <a href="https://www.linkedin.com/in/lukebarrett1/"><FontAwesomeIcon size="2x" icon={["fab", "linkedin"]} /></a>
+                <ScrollAnimation className="meContainer" animateIn="fadeIn" animateOut="fadeOut">
+                    <div className="textWrapper">
+                        <section className="text">
+                            <h1 className="aboutHead">About Me</h1>
+                            <p className="aboutText">I am a VSchool Graduate who learned the Mern Stack. I am currently interning at a company called Live Auctioneers. My passion for Web Development comes from the challenge and reward that it brings when you are able to overcome the problems that are presented.</p>
+                        </section>
+                    </div>
+                    <div className="aboutImageWrapper">
+                        <img className="aboutImage" src={Me} alt="" />
+                    </div>
+                    <div className="linksWrapper">
+                        <div className="links">
+                            <a href="https://github.com/brickmaker17"><FontAwesomeIcon size="2x" icon={["fab", "github"]} /></a>
+                            <a href="https://www.linkedin.com/in/lukebarrett1/"><FontAwesomeIcon size="2x" icon={["fab", "linkedin"]} /></a>
+                        </div>
                     </div>
                 </ScrollAnimation>
             </div>
