@@ -17,7 +17,7 @@ const Content = () => {
                     <img className="aboutImage" src={Me} alt="" />
                     <div className="links">
                         <a href="https://github.com/brickmaker17"><FontAwesomeIcon size="2x" icon={["fab", "github"]} /></a>
-                        <a href=""><FontAwesomeIcon size="2x" icon={["fab", "linkedin"]} /></a>
+                        <a href="https://www.linkedin.com/in/lukebarrett1/"><FontAwesomeIcon size="2x" icon={["fab", "linkedin"]} /></a>
                     </div>
                 </ScrollAnimation>
             </div>
