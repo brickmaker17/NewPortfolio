@@ -5,6 +5,7 @@
 
 img {
   display: block;
+  width: 100vw;
 }
 
 .back {
@@ -13,7 +14,6 @@ img {
 }
 
 .relative {
-  /* width: 100vw; */
   z-index: 10;
 }
 .cloud {
@@ -44,7 +44,6 @@ img {
   height: 200px;
   margin-left: 30px;
   margin-bottom: 200px;
-  /* width: 100%; */
   color: rgb(254, 214, 190);
 }
 .aboutImageWrapper {
