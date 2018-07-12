@@ -47,20 +47,19 @@ img {
 }
 
 .aboutMe {
-  height: 100vh;
-  margin: 0 30px;
   color: rgb(254, 214, 190);
 }
 
 .aboutImageWrapper {
   grid-area: man;
-  width: 100%;
-  justify-content: center;
+  justify-self: start;
+  align-self: center;
+  margin:0 0 0 30px;
 }
 
 .aboutImage {
-  border-radius: 300px;
-  width: 280px;
+  border-radius: 50px;
+  width: 220px;
   height: 275px;
 }
 
@@ -99,7 +98,8 @@ a:hover {
 }
 
 .text {
-  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px
 }
 
 .meContainer {
@@ -121,14 +121,28 @@ a:hover {
       "header man"
       "icon .";
   }
-  
+
+}
+@media (max-width: 900px) {
+  .aboutImageWrapper {
+    grid-area: man;
+    justify-self: end;
+    align-self: center;
+    margin-right: 30px;
+  }
+
+  .text {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: small;
+    
+  }
+
 }
 
 .links {
   display: grid;
   grid-template-columns: 40px 40px;
-  width:100px;
-  margin: 10px;
 }
 
 .aboutHead {

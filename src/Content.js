@@ -1,5 +1,5 @@
 import React from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Me from './images/me3.jpg';
 import "animate.css/animate.min.css";

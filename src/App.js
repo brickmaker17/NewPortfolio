@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Parallax, Background } from 'react-parallax';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import Content from './Content';
 import Backgrounds from './images/Background.png';
 import Layer from './images/Layer.png';
@@ -8,11 +10,10 @@ import Layer2 from './images/Layer2.png';
 import Layer3 from './images/Layer3.png';
 import Layer4 from './images/Layer4.png';
 import Layer5 from './images/Layer5.png';
-import Layer6 from './images/Layer6.png';
-import Layer7 from './images/Layer copy.png';
-import LayerG from './images/LayerG.png';
 import Moon from './images/Moon.png';
 import './App.css';
+
+library.add(fab);
 
 export default class App extends Component {
   constructor(props) {
