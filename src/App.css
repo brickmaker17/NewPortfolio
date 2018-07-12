@@ -41,21 +41,19 @@ img {
   font-size: 40px;
 }
 .aboutMe {
-  height: 200px;
-  margin-left: 30px;
-  margin-bottom: 200px;
+  height: 100vh;
+  margin: 0 30px;
   color: rgb(254, 214, 190);
 }
 .aboutImageWrapper {
   grid-area: man;
   width: 100%;
   justify-content: center;
-  /* height: 300px; */
 }
 .aboutImage {
-  /* margin-top: 20px; */
   border-radius: 300px;
-  width: 380px;
+  width: 280px;
+  height: 275px;
 }
 .linksWrapper {
   display: grid;
@@ -83,16 +81,14 @@ a:hover {
 .textWrapper {
   grid-area: header;
   width: 100%;
-  height: 100px;
   }
 .text {
-  /* display: grid; */
   width: 100%;
 }
 .meContainer {
   display: grid;
-  grid-template-columns: 380px 1fr;
-  grid-template-rows: 200px 1fr 50px;
+  grid-template-columns: minmax(250px, 1fr);
+  grid-template-rows: auto auto auto;
   grid-template-areas: 
     "header ."
     "man ."
