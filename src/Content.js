@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Me from './images/me3.jpg';
+import ProjectsContainer from './projects/ProjectsContainer';
 import "animate.css/animate.min.css";
 import './App.css';
 
@@ -25,6 +26,9 @@ const Content = () => {
                             <a href="https://github.com/brickmaker17"><FontAwesomeIcon size="2x" icon={["fab", "github"]} /></a>
                             <a href="https://www.linkedin.com/in/lukebarrett1/"><FontAwesomeIcon size="2x" icon={["fab", "linkedin"]} /></a>
                         </div>
+                    </div>
+                    <div>
+                        <ProjectsContainer />
                     </div>
                 </ScrollAnimation>
             </div>
