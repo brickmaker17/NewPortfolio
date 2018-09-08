@@ -15,7 +15,11 @@ const Content = () => {
                     <div className="textWrapper">
                         <section className="text">
                             <h1 className="aboutHead">About Me</h1>
-                            <p className="aboutText">I'm a V School Graduate with a background in the JavaScript MERN stack (Mongo, Express, ReactJS, Node.js). Currently interning with Live Auctioneers in Salt Lake City, Utah. My passion for Web Development stems from the challenge and rewards that come after overcoming a problem.</p>
+                            <p className="aboutText">I'm a V School Graduate with a background in the JavaScript MERN 
+                                stack (Mongo, Express, ReactJS, Node.js). Currently interning with Live Auctioneers 
+                                in Salt Lake City, Utah. My passion for Web Development stems from the challenge and 
+                                rewards that come after overcoming a problem.
+                            </p>
                         </section>
                     </div>
                     <div className="aboutImageWrapper">

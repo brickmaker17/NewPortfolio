@@ -5,7 +5,9 @@ import '../App.css';
 
 const ProjectsContainer = () => {
     return (
-        <ProjectImage img={Heroes} />
+        <div>
+            <ProjectImage img={Heroes} />
+        </div>
     )
 }
 
