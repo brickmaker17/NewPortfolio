@@ -6,7 +6,7 @@ import '../App.css';
 const ProjectsContainer = () => {
     return (
         <div>
-            <ProjectImage img={Heroes} />
+            <ProjectImage heading={'Heros'} sub={'Built with HTML, CSS and Bootstrap'} img={Heroes} />
         </div>
     )
 }
