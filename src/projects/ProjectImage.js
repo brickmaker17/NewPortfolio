@@ -9,7 +9,6 @@ const Wrapper = styled.div`
     grid-area: proj;
     display: grid;
     justify-content: center;
-    width: 28%;
 `
 
 const ProjectImage = props => {

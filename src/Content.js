@@ -31,9 +31,7 @@ const Content = () => {
                             <a href="https://www.linkedin.com/in/lukebarrett1/"><FontAwesomeIcon size="2x" icon={["fab", "linkedin"]} /></a>
                         </div>
                     </div>
-                    <div>
-                        <ProjectsContainer />
-                    </div>
+                    <ProjectsContainer />
                 </ScrollAnimation>
             </div>
         </div>

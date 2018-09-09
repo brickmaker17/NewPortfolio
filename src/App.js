@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Parallax, Background } from 'react-parallax';
+import ScrollMagic from 'scrollmagic';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Content from './Content';
@@ -18,33 +19,52 @@ library.add(fab);
 export default class App extends Component {
   constructor(props) {
     super(props);
-
+    this.controller = new ScrollMagic.Controller();
     this.state = {
-      isTop: true
+      isTop: ''
     };
     this.onScroll = this.onScroll.bind(this);
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 260;
-      (isTop !== this.state.isTop) ? this.onScroll(isTop) : null
-      
-    });
-  }
+    var width = window.innerWidth,
+    height = window.innerHeight;
+    console.log( width + ' : ' + height );
 
-  onScroll(isTop) {
-    this.setState({ isTop });
-  }
+    if (width >= 769) {
+    new ScrollMagic.Scene({triggerElement: "#trigger", duration: 175})
+        .on("enter leave", this.onScroll)
+        .addTo(this.controller);
+    } else if(width <= 768 && 376 < width) {
+      new ScrollMagic.Scene({triggerElement: "#trigger", duration: 90})
+        .on("enter leave", this.onScroll)
+        .addTo(this.controller);
+    } else if (width <= 375) {
+      new ScrollMagic.Scene({triggerElement: "#trigger", duration: 42})
+        .on("enter leave", this.onScroll)
+        .addTo(this.controller);
+    }
+}
+
+onScroll = (e) => {
+    let newisTop = '';
+    if (e.type === "enter") {
+      newisTop = <img src={`${Layer5}`} />;
+    }else {
+      newisTop = <img src={`${Moon}`} />;
+    }
+    this.setState({ isTop: newisTop });
+};
 
   render() {
+    const {isTop} = this.state;
     return (
       <div>
         <div className="parallaxLayer">
           <img className="mountain" src={Backgrounds} alt="" />
         </div>
         <div className="back">
-          <img src={this.state.isTop ? `${Layer5}` : `${Moon}` } alt="" />
+          {isTop}
         </div>
         <div className="parallaxLayer parallaxLayer1">
           <img className="mountain" src={Layer4} alt="" />

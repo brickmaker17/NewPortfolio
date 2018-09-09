@@ -27,8 +27,8 @@ img {
   display: grid;
   align-items: center;
   background-color: #2d102f;
-  height: 100vh;
   width: 100vw;
+  height: 90vh;
 }
 
 .heading {
@@ -104,21 +104,22 @@ a:hover {
 
 .meContainer {
   display: grid;
-  grid-template-columns: 300px 1fr 50%;
+  grid-template-columns: 300px 1fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: 
     "header man proj"
-    ". icon proj";
+    ". icon .";
 }
 
-@media all and (max-width: 900px) and (min-width: 427px) {
+@media all and (max-width: 900px) and (min-width: 563px) {
   .meContainer {
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
       "header man"
-      ". icon";
+      ". icon"
+      "proj proj"
   }
 
   .aboutImageWrapper {
@@ -146,15 +147,16 @@ a:hover {
 
 }
 
-@media (max-width: 426px) {
+@media (max-width: 562px) {
   .meContainer {
     display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: auto  auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: 
-      "header ."
-      "man ."
-      "icon .";
+      "header"
+      "man"
+      "icon"
+      "proj";
   }
 
   .aboutImageWrapper {
@@ -173,7 +175,7 @@ a:hover {
 
   .box {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     margin-top: 100px;
   }
@@ -185,6 +187,14 @@ a:hover {
 
   .title {
     font-size: 14px;
+  }
+
+  .main {
+    display: grid;
+    align-items: center;
+    background-color: #2d102f;
+    width: 100vw;
+    height: 100%;
   }
 
 }
