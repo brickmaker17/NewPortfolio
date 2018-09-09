@@ -36,7 +36,7 @@ export default class App extends Component {
         .on("enter leave", this.onScroll)
         .addTo(this.controller);
     } else if(width <= 768 && 376 < width) {
-      new ScrollMagic.Scene({triggerElement: "#trigger", duration: 90})
+      new ScrollMagic.Scene({triggerElement: "#trigger", duration: 70})
         .on("enter leave", this.onScroll)
         .addTo(this.controller);
     } else if (width <= 375) {
