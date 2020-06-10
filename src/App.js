@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import { Parallax, Background } from 'react-parallax';
-import ScrollMagic from 'scrollmagic';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import Content from './Content';
-import Backgrounds from './images/Background.png';
-import Layer from './images/Layer.png';
-import Layer1 from './images/Layer1.png';
-import Layer2 from './images/Layer2.png';
-import Layer3 from './images/Layer3.png';
-import Layer4 from './images/Layer4.png';
-import Layer5 from './images/Layer5.png';
-import Moon from './images/Moon.png';
-import './App.css';
+import React, { Component } from "react";
+import { Parallax, Background } from "react-parallax";
+import ScrollMagic from "scrollmagic";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import Content from "./Content";
+import Backgrounds from "./images/Background.png";
+import Layer from "./images/Layer.png";
+import Layer1 from "./images/Layer1.png";
+import Layer2 from "./images/Layer2.png";
+import Layer3 from "./images/Layer3.png";
+import Layer4 from "./images/Layer4.png";
+import Layer5 from "./images/Sun.png";
+import Moon from "./images/Moon.png";
+import "./App.css";
 
 library.add(fab);
 
@@ -21,51 +21,49 @@ export default class App extends Component {
     super(props);
     this.controller = new ScrollMagic.Controller();
     this.state = {
-      isTop: ''
+      isTop: "",
     };
     this.onScroll = this.onScroll.bind(this);
   }
 
   componentDidMount() {
     var width = window.innerWidth,
-    height = window.innerHeight;
-    console.log( width + ' : ' + height );
+      height = window.innerHeight;
+    console.log(width + " : " + height);
 
     if (width >= 769) {
-    new ScrollMagic.Scene({triggerElement: "#trigger", duration: 175})
+      new ScrollMagic.Scene({ triggerElement: "#trigger", duration: 175 })
         .on("enter leave", this.onScroll)
         .addTo(this.controller);
-    } else if(width <= 768 && 376 < width) {
-      new ScrollMagic.Scene({triggerElement: "#trigger", duration: 70})
+    } else if (width <= 768 && 376 < width) {
+      new ScrollMagic.Scene({ triggerElement: "#trigger", duration: 70 })
         .on("enter leave", this.onScroll)
         .addTo(this.controller);
     } else if (width <= 375) {
-      new ScrollMagic.Scene({triggerElement: "#trigger", duration: 42})
+      new ScrollMagic.Scene({ triggerElement: "#trigger", duration: 42 })
         .on("enter leave", this.onScroll)
         .addTo(this.controller);
     }
-}
+  }
 
-onScroll = (e) => {
-    let newisTop = '';
+  onScroll = (e) => {
+    let newisTop = "";
     if (e.type === "enter") {
       newisTop = <img src={`${Layer5}`} />;
-    }else {
+    } else {
       newisTop = <img src={`${Moon}`} />;
     }
     this.setState({ isTop: newisTop });
-};
+  };
 
   render() {
-    const {isTop} = this.state;
+    const { isTop } = this.state;
     return (
       <div>
         <div className="parallaxLayer">
           <img className="mountain" src={Backgrounds} alt="" />
         </div>
-        <div className="back">
-          {isTop}
-        </div>
+        <div className="back">{isTop}</div>
         <div className="parallaxLayer parallaxLayer1">
           <img className="mountain" src={Layer4} alt="" />
         </div>
@@ -95,9 +93,7 @@ onScroll = (e) => {
           </Parallax>
         </Parallax>
         <Content />
-
       </div>
     );
   }
 }
-
