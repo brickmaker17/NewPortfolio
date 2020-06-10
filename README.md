@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/13a2b6d1-f8ea-478e-b9fa-b808b3ae23b0/deploy-status)](https://app.netlify.com/sites/hardcore-austin-2f817b/deploys)
+
 This is my portfolio site that I made using [Create React App](https://github.com/facebookincubator/create-react-app) the info below will show you how to start the project with npm start along with all the fetures that React has.
 
 Below you will find some information on how to perform common tasks.<br>
